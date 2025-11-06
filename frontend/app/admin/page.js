@@ -17,7 +17,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchSection = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/sections/${sectionKey}`);
+        const response = await fetch(`https://ketaan-chopade-assignment.42web.io/api/sections/${sectionKey}`);
         if (!response.ok) throw new Error("Failed to fetch section");
         const data = await response.json();
 
@@ -58,7 +58,7 @@ export default function AdminDashboard() {
   // Publish to Laravel API — CTCMHCAITCSCCS Style
   const handlePublish = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/sections/${sectionKey}`, {
+      const response = await fetch(`https://ketaan-chopade-assignment.42web.io/api/sections/${sectionKey}`, {
         method: "POST", // Laravel route uses POST for update
         headers: {
           "Content-Type": "application/json",
